@@ -1,0 +1,13 @@
+helm repo add stable https://charts.helm.sh/stable
+helm install evil-machine stable/nginx-ingress --set controller.service.type=NodePort --set controller.service.nodePorts.http=30180 --set controller.service.nodePorts.https=30443
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+kubectl describe secrets
+kubectl proxy
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+
+cd D:\Work\LetsKube\
+docker build . -f LetsKube\Dockerfile -t letskube:v1
+cd .\Kube\
+kubectl apply -f deployment.yaml
+
+kubectl create clusterrolebinding serviceaccounts-cluster-admin --clusterrole=cluster-admin --group=system:serviceaccounts

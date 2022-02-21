@@ -1,0 +1,22 @@
+cd C:\grafana\
+docker swarm init
+docker stack deploy -c docker-compose.yml monitoring
+http://127.0.0.1:3000/
+admin
+http://prometheus:9090
+docker cp monitoring_prometheus.1.cvbfpzrhutqwaj7fsy9ooccau:/etc/prometheus C:/prometheus
+
+- job_name: 'node-exporter'
+
+      static_configs:
+      - targets: ['node-exporter:9100']
+
+docker cp C:\prometheus\prometheus.yml monitoring_prometheus.1.cvbfpzrhutqwaj7fsy9ooccau:/etc/prometheus
+docker kill -s SIGHUP a31c16d13177
+
+cd C:\LetsKube-swagger\
+docker build . -f LetsKube\DockerFile -t letscube-swagger:1
+docker run --name swagger2 -d -p 4574:80 --link cube2 -e AnotherServiceUrl=cube2 letscube-swagger:1
+http://127.0.0.1:4574/swagger/index.html
+
+docker run —name sq -d -p 9090:9090 sonarqube:lts-community
