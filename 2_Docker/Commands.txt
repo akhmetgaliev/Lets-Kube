@@ -1,11 +1,11 @@
 cd C:\LetsKube\
-docker build . -f LetsKube\DockerFile -t letscube:1
+docker build . -f LetsKube\Dockerfile -t letscube:1
 docker images
 docker run --name cube1 -d -p 4567:80  letscube:1
 docker ps
 
 docker login -u "akhmetgaliev" -p "*******" docker.io
-docker build . -f LetsKube\DockerFile -t akhmetgaliev/letscube:1
+docker build . -f LetsKube\Dockerfile -t akhmetgaliev/letscube:1
 docker push akhmetgaliev/letscube:1
 
 docker run --name cube2 -d letscube:1

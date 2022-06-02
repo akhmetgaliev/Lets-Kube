@@ -1,17 +1,15 @@
-﻿version: "3.2"
+﻿version: "3"
 services:
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'rabbitmq'
+  cube2:
+    image: "letscube:1"
+    container_name: cube2
+    restart: always
+  cube3:
+    image: "letscube:1"
+    container_name: cube3
     ports:
-        - 5672:5672
-        - 15672:15672
-    volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
-    networks:
-        - rabbitmq_go_net
-
-networks:
-  rabbitmq_go_net:
-    driver: bridge
+        - "2000:80"
+    environment:
+        AnotherServiceUrl: cube2
+    depends_on:
+        - cube2

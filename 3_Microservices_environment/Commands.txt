@@ -1,22 +1,28 @@
-cd C:\grafana\
-docker swarm init
-docker stack deploy -c docker-compose.yml monitoring
-http://127.0.0.1:3000/
+cd C:\Lets-Kube\3_Microservices_environment\LetKube\LetsKube\grafana
+docker-compose up -d
+http://localhost:3000/
 admin
 http://prometheus:9090
-docker cp monitoring_prometheus.1.cvbfpzrhutqwaj7fsy9ooccau:/etc/prometheus C:/prometheus
+docker ps
+docker cp 3a0626e81a08:/etc/prometheus C:/prometheus
 
 - job_name: 'node-exporter'
 
       static_configs:
       - targets: ['node-exporter:9100']
 
-docker cp C:\prometheus\prometheus.yml monitoring_prometheus.1.cvbfpzrhutqwaj7fsy9ooccau:/etc/prometheus
-docker kill -s SIGHUP a31c16d13177
+docker cp C:\prometheus\prometheus.yml 3a0626e81a08:/etc/prometheus
+docker restart 3a0626e81a08
 
-cd C:\LetsKube-swagger\
-docker build . -f LetsKube\DockerFile -t letscube-swagger:1
-docker run --name swagger2 -d -p 4574:80 --link cube2 -e AnotherServiceUrl=cube2 letscube-swagger:1
-http://127.0.0.1:4574/swagger/index.html
+cd ..\graylog
+docker-compose up -d
+http://localhost:15672/
+http://localhost:9000/
 
-docker run —name sq -d -p 9090:9090 sonarqube:lts-community
+cd ..\..\
+docker build . -f LetsKube\DockerFile -t letscube-env:1
+docker-compose up -d
+http://localhost:2000/
+http://localhost:2000/swagger/index.html
+
+docker run —name sq -d -p 9000:9000 sonarqube:lts-community
