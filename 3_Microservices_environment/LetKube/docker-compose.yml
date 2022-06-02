@@ -1,0 +1,16 @@
+﻿version: "3"
+services:
+  cube-env1:
+    image: "letscube-env:1"
+    container_name: cube-env1
+    restart: always
+  cube-env2:
+    image: "letscube-env:1"
+    container_name: cube-env2
+    ports:
+        - "2000:80"
+    environment:
+        AnotherServiceUrl: cube-env1
+    depends_on:
+        - cube-env1
+
