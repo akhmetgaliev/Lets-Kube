@@ -13,4 +13,3 @@ services:
         AnotherServiceUrl: cube-env1
     depends_on:
         - cube-env1
-

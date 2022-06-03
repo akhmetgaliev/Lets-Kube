@@ -17,12 +17,12 @@ docker restart 3a0626e81a08
 cd ..\graylog
 docker-compose up -d
 http://localhost:15672/
-http://localhost:9000/
+http://localhost:9009/
 
 cd ..\..\
-docker build . -f LetsKube\DockerFile -t letscube-env:1
+docker build . -f LetsKube\Dockerfile -t letscube-env:1
 docker-compose up -d
 http://localhost:2000/
 http://localhost:2000/swagger/index.html
 
-docker run --name sq -d -p 9009:9009 sonarqube:lts-community
+docker run --name sq -d -p 9000:9000 sonarqube:lts-community

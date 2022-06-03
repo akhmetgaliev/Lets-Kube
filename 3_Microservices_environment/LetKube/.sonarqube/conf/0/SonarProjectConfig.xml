@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SonarProjectConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/analyzer/2021/1">
+  <AnalysisConfigPath>F:\Work\LetsKubeGit\Lets-Kube\3_Microservices_environment\LetKube\.sonarqube\conf\SonarQubeAnalysisConfig.xml</AnalysisConfigPath>
+  <ProjectPath>F:\Work\LetsKubeGit\Lets-Kube\3_Microservices_environment\LetKube\LetsKube\LetsKube.csproj</ProjectPath>
+  <FilesToAnalyzePath>F:\Work\LetsKubeGit\Lets-Kube\3_Microservices_environment\LetKube\.sonarqube\conf\0\FilesToAnalyze.txt</FilesToAnalyzePath>
+  <OutPath>F:\Work\LetsKubeGit\Lets-Kube\3_Microservices_environment\LetKube\.sonarqube\out\0</OutPath>
+  <ProjectType>Product</ProjectType>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</SonarProjectConfig>

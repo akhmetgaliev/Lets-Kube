@@ -1,0 +1,1 @@
+F:\Work\LetsKubeGit\Lets-Kube\3_Microservices_environment\LetKube\.sonarqube\out\0
