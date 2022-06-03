@@ -14,13 +14,14 @@ namespace LetsKube
 
 		[HttpGet("/")]
 		public string GetHelloWorld() {
-			_logger.Info("LETSKUBE. Get API(/) called");
-			return $"Hello World from {ServiceIdentity}\n";
+			var helloMessage = $"Hello World from {ServiceIdentity}\n";
+			_logger.Info(helloMessage);
+			return helloMessage;
 		}
 
 		[HttpGet("/container2")]
 		public string GetHelloWorldFromAnotherContainer() {
-			_logger.Info("LETSKUBE. Get API(/container2) called");
+			_logger.Info($"Hello World from {ServiceIdentity}\n");
 			var result = $"First hello from container {ServiceIdentity}\n";
 
 			var anotherServiceUrl = Environment.GetEnvironmentVariable("AnotherServiceUrl");
