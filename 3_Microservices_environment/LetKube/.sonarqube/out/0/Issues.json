@@ -62,9 +62,9 @@
               "resultFile": {
                 "uri": "file:///F:/Work/LetsKubeGit/Lets-Kube/3_Microservices_environment/LetKube/LetsKube/ContainerService.cs",
                 "region": {
-                  "startLine": 28,
+                  "startLine": 29,
                   "startColumn": 41,
-                  "endLine": 28,
+                  "endLine": 29,
                   "endColumn": 71
                 }
               }

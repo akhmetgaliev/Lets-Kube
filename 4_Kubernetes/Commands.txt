@@ -1,13 +1,37 @@
-helm repo add stable https://charts.helm.sh/stable
-helm install evil-machine stable/nginx-ingress --set controller.service.type=NodePort --set controller.service.nodePorts.http=30180 --set controller.service.nodePorts.https=30443
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
-kubectl describe secrets
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
+cd C:\Lets-Kube\4_Kubernetes
+kubectl apply -f dashboard-adminuser.yaml
+kubectl -n kubernetes-dashboard create token admin-user
+
 kubectl proxy
+
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/workloads?namespace=default
 
-cd D:\Work\LetsKube\
-docker build . -f LetsKube\Dockerfile -t letskube:v1
-cd .\Kube\
-kubectl apply -f deployment.yaml
-
 kubectl create clusterrolebinding serviceaccounts-cluster-admin --clusterrole=cluster-admin --group=system:serviceaccounts
+
+cd C:\Lets-Kube\4_Kubernetes\LetsKube\
+docker build . -f LetsKube\Dockerfile -t letskube:v1
+kubectl create namespace lets-kube
+cd .\Kubernetes\cube1\
+kubectl apply -f deployment.yaml
+kubectl get deployments -n lets-kube
+kubectl get pods -n lets-kube
+kubectl apply -f service.yaml
+kubectl get svc -n lets-kube
+kubectl apply -f ingress.yaml
+kubectl get ingress -n lets-kube
+
+http://lets.kube.cube1/
+
+cd ..\cube2\
+kubectl apply -f configmap.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
+kubectl get pods -n lets-kubehttp://lets.kube.cube2/
+
+cd ..\grafana
+kubectl apply -f grafana.yaml
+
+http://localhost:31535

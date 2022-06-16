@@ -4,15 +4,15 @@ http://localhost:3000/
 admin
 http://prometheus:9090
 docker ps
-docker cp 3a0626e81a08:/etc/prometheus C:/prometheus
+docker cp cb295e17f3a2:/etc/prometheus C:/prometheus
 
 - job_name: 'node-exporter'
 
       static_configs:
       - targets: ['node-exporter:9100']
 
-docker cp C:\prometheus\prometheus.yml 3a0626e81a08:/etc/prometheus
-docker restart 3a0626e81a08
+docker cp C:\prometheus\prometheus.yml cb295e17f3a2:/etc/prometheus
+docker restart cb295e17f3a2
 
 cd ..\graylog
 docker-compose up -d

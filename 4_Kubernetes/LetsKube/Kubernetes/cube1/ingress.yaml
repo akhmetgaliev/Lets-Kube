@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lets-kube-cube1
+  namespace: lets-kube
+  annotations:
+    nginx.ingress.kubernetes.io/ingress.class: ingress-nginx
+spec:
+  rules:
+    - host: lets.kube.cube1
+      http:
+        paths:
+          - path: /*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: lets-kube-cube1-svc
+                port:
+                  number: 80

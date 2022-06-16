@@ -1,16 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "wffxhzFPpc1GeBAW91QB9NhseiGVYFuQZFbGlGFNfPUGHnofraOOfiaPoosTVoRrQIZRDxx2IG7u4XFCslVqAg==",
+  "dgSpecHash": "anTGbpzWEzO4kUqGiAh2DArHlneNc9A/iPNAI3EOq/PUVkjVivlk+Ow+lblhT8ANOAufSX2apKX0IlefZIKYbQ==",
   "success": true,
-  "projectFilePath": "C:\\LetsKube 2\\LetsKube\\LetsKube.csproj",
+  "projectFilePath": "F:\\Work\\LetsKubeGit\\Lets-Kube\\4_Kubernetes\\LetsKube\\LetsKube\\LetsKube.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\a.akhmetgaliev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\Антон\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\nlog\\4.5.11\\nlog.4.5.11.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\nlog.rabbitmq.target\\2.7.7\\nlog.rabbitmq.target.2.7.7.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\rabbitmq.client\\6.0.0\\rabbitmq.client.6.0.0.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "C:\\Users\\Антон\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

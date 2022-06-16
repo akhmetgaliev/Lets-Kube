@@ -1,0 +1,8 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rabbitmq
+  namespace: lets-kube
+spec:
+  type: ExternalName
+  externalName: rabbitmq.graylog.svc.cluster.local

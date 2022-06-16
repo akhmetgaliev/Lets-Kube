@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lets-kube-cube2
+  namespace: lets-kube
+  labels:
+    app: lets-kube-cube2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lets-kube-cube2
+  template:
+    metadata:
+      labels:
+        app: lets-kube-cube2
+    spec:
+      containers:
+        - name: lets-kube-cube2
+          image: letskube:v1
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          env:
+            - name: "AnotherServiceUrl"
+              valueFrom:
+                configMapKeyRef:
+                  name: lets-kube-cube2-config
+                  key: AnotherServiceUrl

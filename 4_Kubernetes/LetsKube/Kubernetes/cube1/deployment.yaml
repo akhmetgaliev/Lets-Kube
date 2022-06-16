@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lets-kube-cube1
+  namespace: lets-kube
+  labels:
+    app: lets-kube-cube1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lets-kube-cube1
+  template:
+    metadata:
+      labels:
+        app: lets-kube-cube1
+    spec:
+      containers:
+        - name: lets-kube-cube1
+          image: letskube:v1
+          env:
+            - name: rmqHost
+              value: rabbitmq-ext.graylog.svc.cluster.local
+          ports:
+          - containerPort: 80
+            protocol: TCP
