@@ -4,7 +4,7 @@ metadata:
   name: lets-kube-cube1-svc
   namespace: lets-kube
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: lets-kube-cube1
   ports:

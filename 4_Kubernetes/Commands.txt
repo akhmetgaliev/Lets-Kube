@@ -1,4 +1,4 @@
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/baremetal/deploy.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
 cd C:\Lets-Kube\4_Kubernetes
 kubectl apply -f dashboard-adminuser.yaml
@@ -29,9 +29,16 @@ kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
-kubectl get pods -n lets-kubehttp://lets.kube.cube2/
+kubectl get pods -n lets-kube
+http://lets.kube.cube2/
 
 cd ..\grafana
 kubectl apply -f grafana.yaml
+
+cd ..\graylog
+kubectl apply -f graylog.yaml
+
+cd ..\cube1
+kubectl apply -f rabbitmq-service.yaml
 
 http://localhost:31535

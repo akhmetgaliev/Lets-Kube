@@ -6,4 +6,4 @@ metadata:
   labels:
     app: lets-kube-cube2
 data:
-  AnotherServiceUrl: lets-kube-svc
+  AnotherServiceUrl: lets-kube-cube1-svc
